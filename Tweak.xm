@@ -70,7 +70,7 @@ inline BOOL flexAlreadyLoaded() {
     if (libflex) {
         // Hey Snapchat / Snap Inc devs,
         // This is so users don't get their accounts locked.
-        if (isLikelyUIProcess() && !isSnapchatApp()) {
+        if (isLikelyUIProcess()) {
             handle = dlopen(libflex.UTF8String, RTLD_LAZY);
             
             if (libreflex) {
